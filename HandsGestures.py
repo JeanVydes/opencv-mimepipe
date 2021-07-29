@@ -77,8 +77,6 @@ while(True):
 
     img = frame
 
-    print(lmList)
-
     lmList = lmList[0]
     if len(lmList) != 0:
         pulgar1, pulgar2 = lmList[4][1], lmList[4][2]
@@ -106,8 +104,6 @@ while(True):
 
         lengthBetweenPulgarIndice = math.hypot(indice1 - pulgar1, indice2 - pulgar2)
         lengthBetweenIndiceMedio = math.hypot(medio1 - indice1, medio2 - indice2)
-
-        print(lengthBetweenIndiceMedio)
 
         if lengthBetweenPulgarIndice < 25 and lengthBetweenIndiceMedio > 48:
             _ = call(["amixer", "-D", "pulse", "sset", "Master", "0%"])
